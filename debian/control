@@ -9,7 +9,6 @@ Package: vyatta-config-sync
 Architecture: all
 Depends: rsync,
  openssh-client,
- ${misc:Depends}
 Recommends: vyatta-config-validator
 Description: Vyatta (VC5/VC6/VC7)/Vyos/EdgeOS config.boot synchronizer
  vyatta-config-sync is a Vyatta configuration synchronizer destined
