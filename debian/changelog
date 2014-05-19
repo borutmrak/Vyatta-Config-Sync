@@ -1,0 +1,6 @@
+vyatta-config-sync (0.1.16-1) unstable; urgency=low
+
+  * Initial release for EdgeOS
+
+ -- Borut Mrak <b@9bit.biz>  Tue, 20 May 2014 00:53:04 +0200
+

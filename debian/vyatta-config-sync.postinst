@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# change group ownership for vyatta-config-sync config dir (recursive)
+chgrp -R vyattacfg /etc/vyatta-config-sync

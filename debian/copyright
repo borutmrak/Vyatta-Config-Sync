@@ -1,0 +1,23 @@
+This package was debianized by Borut Mrak <b@9bit.biz> on
+Tue, 20 May 2014.
+
+It's original content from the GIT repository 
+   <https://github.com/borutmrak/Vyatta-Config-Sync>
+which was forked from:
+   <https://github.com/vyatta4people/Vyatta-Config-Sync>
+
+Upstream Author: 
+
+    Cartman (vyatta4people.org)
+
+Copyright: 
+
+    Cartman (vyatta4people.org)
+    All Rights Reserved.
+
+License:
+
+This program contains no license and can't be distributed.
+
+The Debian packaging is (C) 2014, Borut Mrak <b@9bit.biz> and
+will eventually be licensed under the same license as the code.
