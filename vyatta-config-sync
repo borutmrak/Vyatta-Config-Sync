@@ -164,15 +164,8 @@ while [ ${CL} -le ${LC} ]; do
       ssh ${ssh_options} ${SYNC_HOST_ADDR} "sudo cp -p ${CONFIG_BOOT_FILE} ${CONFIG_BOOT_FILE}.vyatta-config-sync.${SLAVE_SERIAL}" >/dev/null 2>&1
     fi
     # Transfer new config.boot to slave
-    SYNC_HOST_TMP_CONFIG_BOOT_FILE=$(ssh ${ssh_options} ${SYNC_HOST_ADDR} "mktemp /tmp/config.boot.XXXXXX" 2>/dev/null)
-    if [ x"${SYNC_HOST_TMP_CONFIG_BOOT_FILE}" != x ]; then
-      rsync -aH -e "ssh ${ssh_options}" "${TMP_CONFIG_BOOT_FILE}" ${SYNC_HOST_ADDR}:"${SYNC_HOST_TMP_CONFIG_BOOT_FILE}" >>"${STDOUT_DST}" 2>>"${STDERR_DST}"
-      ssh ${ssh_options} ${SYNC_HOST_ADDR} "sudo chown root:vyattacfg ${SYNC_HOST_TMP_CONFIG_BOOT_FILE}" >>"${STDOUT_DST}" 2>>"${STDERR_DST}"
-      ssh ${ssh_options} ${SYNC_HOST_ADDR} "sudo mv ${SYNC_HOST_TMP_CONFIG_BOOT_FILE} ${CONFIG_BOOT_FILE}" >>"${STDOUT_DST}" 2>>"${STDERR_DST}"
-    else
-      suicide "Could not create temporary file for config.boot sync on ${SYNC_HOST_ADDR}."
-    fi
-
+    rsync -aH -e "ssh ${ssh_options}" "${TMP_CONFIG_BOOT_FILE}" ${SYNC_HOST_ADDR}:"${CONFIG_BOOT_FILE}" >>"${STDOUT_DST}" 2>>"${STDERR_DST}"
+    ssh ${ssh_options} ${SYNC_HOST_ADDR} "sudo chown root:vyattacfg ${CONFIG_BOOT_FILE}" >>"${STDOUT_DST}" 2>>"${STDERR_DST}"
   else
     let CL++
     echo "[ SKIP ]"
