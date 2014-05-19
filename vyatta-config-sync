@@ -15,6 +15,10 @@ TMP_LOCAL_TRANSFORMATIONS_FILE="${TMP_DIR}/local_transformations.sed"
 STDOUT_DST="/tmp/vyatta-config-sync.out"
 STDERR_DST="/tmp/vyatta-config-sync.err"
 
+# Test for EdgeOS
+if [ -f /usr/sbin/ubnt-hal ]; then
+  CONFIG_BOOT_FILE="/config/config.boot"
+fi
 
 # If your life suxx you have only one choise :)
 function suicide() {
