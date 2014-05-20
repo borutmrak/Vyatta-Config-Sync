@@ -1,0 +1,2 @@
+help: Synchronize configuration with slave routers
+run: /usr/sbin/vyatta-config-sync load

@@ -1,0 +1,2 @@
+help: Don't load configuration on slave
+run: /usr/sbin/vyatta-config-sync noload
