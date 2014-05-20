@@ -1,3 +1,9 @@
+vyatta-config-sync (0.1.16-2~edgeos2) unstable; urgency=low
+
+  * Add basic opmode commands.
+
+ -- Borut Mrak <b@9bit.biz>  Tue, 20 May 2014 02:14:58 +0200
+
 vyatta-config-sync (0.1.16-2~edgeos1) unstable; urgency=low
 
   * Packaging fixes.

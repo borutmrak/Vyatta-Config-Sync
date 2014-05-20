@@ -1,2 +1,3 @@
 vyatta-config-sync /usr/sbin
 config/* /etc/vyatta-config-sync
+vyatta-op /opt/vyatta/share/
